@@ -1,0 +1,25 @@
+﻿<h1>
+    Demo  Controller to View Data Transfer Data
+</h1>
+
+<h2>@ViewData["Greetings"]</h2>
+@{
+    Student s = ViewData["Student"] as Student;
+}
+@if (s != null)
+{
+    <div>@s.Id</div>
+    <div>@s.Name</div>
+    <div>@s.Grade</div>
+}
+
+<div>
+    <h3>@ViewBag.Greetings</h3>
+    <h3>@ViewBag.Student.Id</h3>
+    <h3>@ViewBag.Student.Name</h3>
+    <h3>@ViewBag.Student.Grade</h3>
+</div>
+<div>
+    <h2>@Model.Message</h2>
+    <h2>@Model.student1.Id</h2>
+</div>

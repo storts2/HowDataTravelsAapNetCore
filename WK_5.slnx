@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DataTravelFromViewToController/DataTravelFromViewToController.csproj" />
+  <Project Path="MVC_CRUD_WithDb/MVC_CRUD_WithDb.csproj" />
+  <Project Path="WK_5_DataTravelControllerToView/WK_5_DataTravelControllerToView.csproj" />
+</Solution>

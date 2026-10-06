@@ -1,0 +1,65 @@
+﻿@model DataTravelFromViewToController.Models.Student;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<section>
+    <h1>Passing the Data to Action Functions as Parameter</h1>
+    <form asp-action="UsingParameters" method="post">
+        <div>
+            <lable for="param-id">Student ID: </lable>
+            <input type="number" id="param-id" name="id"/>
+        </div>
+        <div>
+            <lable for="param-name">Student Name: </lable>
+            <input type="text" id="param-name" name="name"/>
+        </div>
+        <div>
+            <lable for="param-grade">Student Grade: </lable>
+            <input type="text" id="param-grade" name="grade" />
+        </div>
+        <button type="submit">Submit using parameters</button>
+    </form>
+</section>
+<section>
+    <h1>Passing the Data to Action Functions as FormCollection</h1>
+    <form asp-action="UsingFormCollection" method="post">
+        <div>
+            <lable for="param-id">Student ID: </lable>
+            <input type="number" id="param-id" name="id" />
+        </div>
+        <div>
+            <lable for="param-name">Student Name: </lable>
+            <input type="text" id="param-name" name="name" />
+        </div>
+        <div>
+            <lable for="param-grade">Student Grade: </lable>
+            <input type="text" id="param-grade" name="grade" />
+        </div>
+        <button type="submit">Submit using parameters</button>
+    </form>
+</section>
+<section>
+    <h1>Passing the Data to Action Functions as Model Binding</h1>
+    <form asp-action="UsingModelBinding" method="post">
+        <div>
+            <lable for="Id">Student ID: </lable>
+            <input asp-for="Id" />
+        </div>
+        <div>
+            <lable for="Name">Student Name: </lable>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <lable for="Grade">Student Grade: </lable>
+            <input asp-for="Grade" />
+        </div>
+        <button type="submit">Submit using parameters</button>
+    </form>
+</section>
