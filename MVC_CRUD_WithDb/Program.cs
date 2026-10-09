@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MVC_CRUD_WithDb.Context;
+using MVC_CRUD_WithDb.Services;
 
 namespace MVC_CRUD_WithDb;
 
@@ -15,6 +16,8 @@ public class Program
         builder.Services.AddDbContext<SchoolDbContext>(options
             =>options.UseSqlServer(builder.Configuration
             .GetConnectionString("SchoolConnection")));
+
+        builder.Services.AddScoped<IStudentServices, StudentServices>();
 
         var app = builder.Build();
 
